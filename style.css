@@ -1,4 +1,127 @@
-html {
-  height: 100%;
-  width: 100%;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  background-color: #f9fafb;
+  color: #111;
+  overflow-x: hidden;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 60px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.dot {
+  width: 15px;
+  height: 15px;
+  background-color: #fbbf24;
+  border-radius: 50%;
+}
+
+.role {
+  font-size: 14px;
+  font-weight: 400;
+  color: #6b7280;
+  margin-left: 8px;
+}
+
+.nav-right a {
+  text-decoration: none;
+  color: #111;
+  font-weight: 500;
+  margin-left: 25px;
+  transition: color 0.3s;
+}
+
+.nav-right a:hover {
+  color: #2563eb;
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 60px;
+  gap: 80px;
+  padding: 0 60px;
+}
+
+.profile-img img {
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  object-fit: cover;
+  filter: grayscale(100%);
+}
+
+.intro-text h1 {
+  font-size: 70px;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.intro-text h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.intro-text p {
+  color: #4b5563;
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 30px;
+  max-width: 400px;
+}
+
+/* Buttons */
+.buttons {
+  display: flex;
+  gap: 20px;
+}
+
+button {
+  border: none;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  font-weight: 700;
+  cursor: pointer;
+  font-size: 16px;
+  color: #111;
+  transition: transform 0.2s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+.resume {
+  background-color: #fbbf24;
+}
+
+.projects {
+  background-color: #f87171;
+}
+
+.contact {
+  background-color: #67e8f9;
 }
