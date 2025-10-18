@@ -21,8 +21,33 @@
       <a href="projects.html">Project</a>
     </div>
   </nav>
-  <div class="intro-text">
-    <h1>Hello</h1>
-    <h3>Will update soon ! </h3></div>
+  <div class="container">
+    <div class="avatar-contact">✉️</div>
+    <div class="contact-title">Contact Me</div>
+    <div class="contact-desc">
+        Feel free to reach out for collaborations, robotics consultation, or tech talk. 
+        You can use the form below or email directly.
+    </div>
+    <form id="contact-form">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Your message..." required></textarea>
+        <center><button type="submit">Send Message</button></center>
+    </form>
+    <div class="contact-info">
+        Or email: <b>bavesh2006kumar@gmail.com</b>
+        <div class="socials">
+            <a href="https://github.com/Sam-bot-dev" class="social-link" title="GitHub">🐱</a>
+            <a href="https://www.linkedin.com/in/bhavesh-508307317/" class="social-link" title="LinkedIn">💼</a>
+        </div>
+    </div>
+  </div>
+  <script>
+    document.getElementById('contact-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        alert('Thank you! Your message has been recorded for the portfolio demo.');
+        this.reset();
+    });
+  </script>
 </body>
 </html>

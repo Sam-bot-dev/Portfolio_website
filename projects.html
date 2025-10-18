@@ -1,28 +1,224 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio | Bhavesh </title>
-  <link rel="stylesheet" href="style.css" />
-</head>
+    <meta charset="UTF-8">
+    <title>Robotic Project | Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background: #f5f5f5;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+        }
+        .container {
+            max-width: 1050px;
+            margin: 64px auto 0 auto;
+            padding: 0 24px 40px 24px;
+        }
+        .header-bar {
+            width: 100%;
+            padding: 30px 0 60px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .nav-menu {
+            display: flex;
+            gap: 32px;
+        }
+        .nav-menu a {
+            text-decoration: none;
+            color: #232323;
+            font-size: 1.17em;
+            font-weight: bold;
+            letter-spacing: 0.03em;
+            transition: color 0.12s;
+        }
+        .nav-menu a:hover {
+            color: #f75646;
+        }
 
+        /* --- Main project section --- */
+        .project-showcase {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 85px;
+            margin-top: 36px;
+            flex-wrap: wrap;
+        }
+        .project-img {
+            width: 340px;
+            height: 340px;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: 0 4px 32px rgba(44, 44, 44, 0.12);
+            background: #eee;
+        }
+        .project-info {
+            max-width: 430px;
+        }
+        .project-title {
+            font-size: 3.6em;
+            font-weight: 800;
+            color: #232323;
+            margin-bottom: 4px;
+            line-height: 1.1;
+        }
+        .project-subhead {
+            font-size: 1.25em;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #262626;
+        }
+        .project-bio {
+            font-size: 1.13em;
+            color: #383e42;
+            margin-bottom: 44px;
+            line-height: 1.5;
+        }
+        .cta-section {
+            display: flex;
+            gap: 34px;
+        }
+        .cta-btn {
+            width: 146px;
+            height: 146px;
+            background: #71dbdb;
+            color: #232323;
+            font-size: 2em;
+            font-weight: 700;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            letter-spacing: 0.02em;
+            margin-top: 3px;
+            box-shadow: 0 2px 16px rgba(44,44,44,0.11);
+            transition: background 0.18s, box-shadow 0.18s;
+        }
+        .cta-btn:hover {
+            background: #f75646;
+            color: #fff;
+            box-shadow: 0 6px 30px #f7564634;
+        }
+      /* Navbar */
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 18px 60px;
+        border-bottom: 1px solid #e5e7eb;
+      }
+
+      .nav-left {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .dot {
+        width: 15px;
+        height: 15px;
+        background-color: #fbbf24;
+        border-radius: 50%;
+      }
+
+      .role {
+        font-size: 14px;
+        font-weight: 400;
+        color: #6b7280;
+        margin-left: 8px;
+      }
+
+      .nav-right a {
+        text-decoration: none;
+        color: #111;
+        font-weight: 500;
+        margin-left: 25px;
+        transition: color 0.3s;
+      }
+
+      .nav-right a:hover {
+        color: #2563eb;
+      }
+        @media (max-width: 900px) {
+            .project-showcase {
+                flex-direction: column;
+                gap: 32px;
+            }
+            .project-info { text-align: center; }
+        }
+        @media (max-width: 630px) {
+            .container { padding: 0 8px 30px 8px;}
+            .header-bar { padding: 15px 0 27px 0;}
+            .project-title { font-size: 2.08em;}
+            .project-img { width: 210px; height: 210px;}
+            .project-bio { font-size: 1em;}
+            .cta-section { gap: 18px;}
+            .cta-btn { width:98px; height:98px; font-size: 1.19em;}
+        }
+    </style>
+</head>
 <body>
-  <!-- Navbar -->
-  <nav class="navbar">
-    <div class="nav-left">
-      <div class="dot"></div>
-      <h2>Bhavesh kumar <span class="role">SDE</span></h2>
+    <div class="container">
+      <!-- Navbar -->
+      <nav class="navbar">
+        <div class="nav-left">
+          <div class="dot"></div>
+          <h2>Bhavesh kumar <span class="role">SDE</span></h2>
+        </div>
+        <div class="nav-right">
+          <a href="index.html">Overview</a>
+          <a href="resume.html">Resume</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </nav>
+        <section class="project-showcase">
+            <!-- Project image (replace src with your image file) -->
+            <img src="roboeye.jpg" alt="Robotics Project Photo" class="project-img">
+            <div class="project-info">
+                <div class="project-title">Project Orion</div>
+                <div class="project-subhead">AI-powered Personal Assistant Robot</div>
+                <div class="project-bio">
+                    Orion is an intelligent, AI-powered personal assistant robot designed to simplify daily tasks and enhance user interaction. Equipped with advanced speech recognition, natural language understanding, and interactive responses, Orion can assist with scheduling, information retrieval, reminders, and more. Its mobility and user-friendly interface allow it to navigate environments seamlessly, making it a perfect blend of functionality and innovation in personal robotics.
+                </div>
+                <div class="cta-section">
+                    <!-- Example CTAs: Replace with links or actions as desired -->
+                    <a href="#" class="cta-btn">Demo</a>
+                    <a href="#" class="cta-btn" style="background:#f4b400;color:#222;">Code</a>
+                </div>
+            </div>
+        </section>
+      <section class="project-showcase reverse">
+          <div class="project-info">
+              <div class="project-title">Image Processing Suite</div>
+              <div class="project-subhead">Real-time Computer Vision Project</div>
+              <div class="project-bio">
+                  This project demonstrates how to transform a regular image into a cartoon-style image using OpenCV. It's built specifically for execution in Google Colab, making use of Colab’s built-in tools for image display and file handling.
+              </div>
+              <div class="cta-section">
+                  <a href="#" class="cta-btn">Demo</a>
+                  <a href="https://github.com/Sam-bot-dev/Image-Processing/tree/main" class="cta-btn" style="background:#f4b400;color:#222;">Code</a>
+              </div>
+          </div>
+          <!-- Project image on the right: replace src with your image file -->
+          <img src="cartoon (1).jpg" alt="Image Processing Project" class="project-img">
+      </section>
     </div>
-    <div class="nav-right">
-      <a href="index.html">Overview</a>
-      <a href="resume.html">Resume</a>
-      <a href="#">Contact</a>
-    </div>
-  </nav>
-  <div class="intro-text">
-    <h1>Hello</h1>
-    <h3>Will update soon ! </h3></div>
+    <!-- You can add custom JS for interactive actions here -->
+    <!-- <script>
+        // Example: Handle button clicks
+        document.querySelectorAll('.cta-btn').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                if(this.textContent === "Demo") {
+                    alert("Demo will be available soon!");
+                } else if(this.textContent === "Code") {
+                    alert("GitHub link coming soon!");
+                }
+            });
+        });
+    </script> -->
 </body>
 </html>
